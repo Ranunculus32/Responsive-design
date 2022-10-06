@@ -1,6 +1,116 @@
 body {
-  font: "Poppins";
+  font-family: "Poppins", sans-serif;
   color: black background-color white;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
+}
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 90vw;
+}
+.container .nav-container {
+  padding: 0;
+  margin: 0;
+  height: 20vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .nav-container .logo {
+  margin-left: 15px;
+  padding-left: 15px;
+  display: flex;
+}
+.container .nav-container .logo h3 {
+  font-family: "Baloo 2";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .nav-container .navlist {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1em;
+}
+.container .nav-container .navlist a {
+  color: black;
+  text-decoration: none;
+}
+.container .nav-container .navlist .nav-item {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  align-self: flex-end;
+}
+.container .nav-container .navlist .nav-item:hover {
+  color: orange;
+}
+.container .content-container {
+  margin: 20px;
+  padding: 20px;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.container .content-container .content-text {
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+.container .content-container .content-text h1 {
+  font-size: 5.6rem;
+}
+.container .content-container .content-text p {
+  font-size: 1.3rem;
+}
+.container .content-container .content-img {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 100%;
+}
+.container .content-container .content-img img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 400px) {
+  .container .container {
+    flex: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container, .content-container {
+    flex: none;
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
