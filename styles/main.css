@@ -1,101 +1,109 @@
 body {
   font-family: "Poppins", sans-serif;
-  color: black background-color white;
+  color: black;
+  background-color: white;
   height: 100vh;
   width: 100vw;
   margin: 1em 1em 0 1em;
-  position: absolute;
 }
-body .container {
+
+.wrapper {
   justify-content: center;
-  margin: 1em 1em 0 1em;
+  margin: 2em 0 0 3em;
 }
-body .nav-container {
+.wrapper .nav-wrapper {
+  margin-left: 0;
+  padding: 0;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-body .nav-container .logo {
+.nav-container .logo {
   display: flex;
   justify-self: flex-start;
   margin-top: 1em;
   margin-right: auto;
 }
-body .nav-container h3 {
+.nav-container h3 {
   font-family: "Baloo 2";
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   font-weight: bold;
 }
-body .nav-container .navlist {
+
+.navlist {
   justify-content: center;
   gap: 1em;
   display: flex;
   margin-top: 3em;
 }
-body .nav-container .navlist li {
+.navlist li {
   list-style-type: none;
 }
-body .nav-container .navlist a {
+.navlist a {
   text-decoration: none;
   color: black;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5vw;
 }
-body .nav-container .navlist a:hover {
+.navlist a:hover {
   color: orange;
-}
-body .content-text h1 {
-  font-size: 5.6rem;
-}
-body .content-text p {
-  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.container {
-  width: 100vw;
-  display: grid;
-  -moz-column-gap: 2em;
-       column-gap: 2em;
-  grid-template-columns: repeat(2, 1fr);
+.content-text h1 {
+  font-size: 7vw;
 }
-.container img {
-  height: auto;
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.content-text p {
+  font-size: 2.5vw;
 }
-.container .nav-container {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row: 1;
-  grid-row-end: 2;
-}
-.container .content-text {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row: 2;
-  grid-row-end: 3;
+
+.content-wrapper {
+  display: flex;
   margin-top: 2em;
-}
-.container .content-img {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row: 2;
-  grid-row-end: 3;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media screen and (max-width: 600px) {
-  .container {
-    float: none;
-    display: block;
-    width: 100%;
-  }
+  gap: 2em;
 }
 
-@media all and (max-width: 350px) {
-  .container .content-container, .content-img {
-    flex-direction: column;
+.wrapper {
+  grid-template-areas: "nav-container" "content-text content-img";
+}
+.wrapper .nav-container {
+  width: 50%;
+  height: 30%;
+}
+.wrapper .content-wrapper {
+  width: 100%;
+  height: 70%;
+}
+.wrapper .content-wrapper .content-text {
+  width: 50%;
+  height: 70%;
+}
+.wrapper .content-wrapper .content-img {
+  width: 50%;
+  height: 70%;
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    grid-template-areas: "nav-container" "content-text" "content-img";
+  }
+  .wrapper .nav-wrapper {
+    display: none;
+  }
+  .wrapper .content-wrapper {
     width: 100%;
+    height: 70%;
+    display: block;
+  }
+  .wrapper .content-wrapper .content-text {
+    width: 100%;
+    height: 70%;
+  }
+  .wrapper .content-wrapper .content-img {
+    width: 100%;
+    height: 70%;
   }
 }/*# sourceMappingURL=main.css.map */

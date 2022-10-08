@@ -1,116 +1,131 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: black
-    background-color white;
+    color: black;
+    background-color: white;
     height: 100vh;
     width: 100vw;
     margin: 1em 1em 0 1em;
-    position: absolute;
+     
+}
 
-    .container {
-        justify-content: center;
-        margin: 1em 1em 0 1em;
-       
+.wrapper {
+    justify-content: center;
+    margin: 2em 0 0 3em;
+    .nav-wrapper {
+        margin-left: 0;
+        padding: 0;
     }
+}
 
-    .nav-container {
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .logo {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        
-
-        .logo {
-            display: flex;
-            justify-self: flex-start;
-            margin-top: 1em;
-            margin-right: auto;
-           
-        }
-        h3 {
-            font-family: 'Baloo 2';
-            font-size:1.5rem;
-            font-weight: bold;
-        }
-
-        .navlist {
-            justify-content: center;
-            gap: 1em;
-            display: flex;
-            margin-top: 3em;
-            li {
-                list-style-type: none;
-            }
-        
-            a {
-                text-decoration: none;
-                color: black;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 1rem;
-            }
-            a:hover {
-                color: orange;
-            }
-          
-        }
-    }.content-text {
-       
-
-        h1 {
-            font-size: 5.6rem;
-        }
-
-        p {
-            font-size: 1.3rem;
-        }
-    }
-
-    
-    
-}
-.container {
-    width: 100vw;
-    display:grid;
-    column-gap: 2em;
-    grid-template-columns: repeat(2, 1fr);
-    img {
-
-        height: auto;
-        max-width: 100%;
-        object-fit: cover;
-    }
-
-    .nav-container {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 1;
-        grid-row-end: 2;
-    }
-    .content-text{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row: 2;
-        grid-row-end: 3;
-        margin-top: 2em;
-    }
-    .content-img {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row: 2;
-        grid-row-end: 3;
+        justify-self: flex-start;
+        margin-top: 1em;
         margin-right: auto;
-        margin-left: auto;
+      
     }
-    @media screen and (max-width: 600px) {
-        float: none;
-        display: block;
-        width: 100%;
-      }
+    h3 {
+        font-family: 'Baloo 2';
+        font-size:1.5vw;
+        font-weight: bold;
+    }
 }
-@media all and (max-width: 350px) {
-    .container .content-container, .content-img  {
-       flex-direction: column;
-       width: 100%;
-     }
- }
+
+.navlist {
+    justify-content: center;
+    gap: 1em;
+    display: flex;
+    margin-top: 3em;
+    li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.5vw;
+    }
+    a:hover {
+        color: orange;
+        font-weight: bold;
+    }
+}
+.content-text {
+       
+    h1 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+    }
+}
+.content-wrapper {
+    display: flex;
+    margin-top: 2em;
+    gap: 2em;
+}
    
+.wrapper {
+    grid-template-areas: 
+    "nav-container"
+    "content-text content-img";
+    
+    .nav-container {
+        width: 50%;
+        height: 30%;
+     }
+    .content-wrapper {
+        width: 100%;
+        height: 70%;
+
+        .content-text {
+            width: 50%;
+            height: 70%;
+        }
+        .content-img {
+            width: 50%;
+            height: 70%;
+        }
+    }         
+}
+@media screen and (max-width: 400px) {
+    .wrapper {
+        grid-template-areas: 
+        "nav-container"
+        "content-text"
+        "content-img";
+        
+        .nav-wrapper {
+           display:none
+        }
+        .content-wrapper {
+            width: 100%;
+            height: 70%;
+            display: block;
+
+            .content-text {
+                width: 100%;
+                height: 70%;
+            }
+            .content-img {
+                width: 100%;
+                height: 70%;
+            }
+        
+        }   
+
+    }
+}
+
+
+
+
+
+ 
