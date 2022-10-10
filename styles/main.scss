@@ -119,15 +119,23 @@ body {
         }
     }
     @media screen and (min-width: 700px) and (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-
         .icon {
             display: flex;
             float: right;
             visibility: visible;
+        
+         .content-wrapper {
+            flex-direction: column;
+
+        .content-text {
+            justify-content: center;
+            align-content: center;
+            align-items: center;
         }
-         }
+
+        
+        }
+        }
 }
 /*****
 .wrapper {
